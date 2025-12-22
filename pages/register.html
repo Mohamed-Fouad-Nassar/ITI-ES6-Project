@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="E-commerce Website using HTML, CSS, JS. as a evaluation for the ES6 course in ITI, register page"
+    />
+    <link
+      rel="shortcut icon"
+      href="/assets/images/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../styles/auth.css" />
+
+    <title>E-commerce | Register</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Register a new account</h2>
+
+      <form id="register-form">
+        <span id="form-err"></span>
+        <div class="field">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" />
+          <span id="name-err"></span>
+        </div>
+        <div class="field">
+          <label for="email">Email address</label>
+          <input type="email" id="email" />
+          <span id="email-err"></span>
+        </div>
+        <div class="field">
+          <label for="password">Password</label>
+          <input type="password" id="password" />
+          <span id="pass-err"></span>
+        </div>
+        <div class="field">
+          <label for="confirm-password">Confirm Password</label>
+          <input type="password" id="confirm-password" />
+          <span id="confirm-pass-err"></span>
+        </div>
+        <button class="btn btn-primary">Register</button>
+      </form>
+
+      <p>
+        Already have an account?
+        <a href="./login.html">Login to your account</a>
+      </p>
+    </div>
+
+    <script type="module" src="../js/register.js"></script>
+  </body>
+</html>

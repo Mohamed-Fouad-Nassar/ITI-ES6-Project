@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="E-commerce Website using HTML, CSS, JS. as a evaluation for the ES6 course in ITI, single product page"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="shortcut icon"
+      href="/assets/images/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../styles/product.css" />
+
+    <title>Product Details</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h2>E-com</h2>
+        <nav>
+          <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="./products.html">Products</a></li>
+            <li><a href="./testimonials.html">Testimonials</a></li>
+            <li><a href="./cart.html">Cart</a></li>
+          </ul>
+        </nav>
+        <div>
+          <ul id="no-user">
+            <li><a class="btn btn-primary" href="./login.html">Log in</a></li>
+            <li>
+              <a class="btn btn-secondary" href="./register.html">Register</a>
+            </li>
+          </ul>
+          <div id="user-profile">
+            <span id="username"></span>
+            <button class="btn btn-danger" id="log-out">Log out</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <button class="btn btn-ghost" id="back-btn">
+          <i class="fa-solid fa-arrow-left"></i>
+          Back
+        </button>
+        <article>
+          <h2 id="product-name-mobile"></h2>
+          <div class="wrapper">
+            <div class="details">
+              <h2 id="product-name"></h2>
+              <p id="product-description"></p>
+              <div>
+                <span id="product-price"></span>
+                <button class="btn btn-primary" id="add-to-cart">
+                  <i class="fa-solid fa-cart-plus"></i>
+                  Add to cart
+                </button>
+              </div>
+            </div>
+            <div>
+              <img id="product-image" />
+            </div>
+          </div>
+        </article>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div>
+          <h2>E-com</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas,
+            voluptatem numquam ipsa, itaque molestiae molestias temporibus
+            tempora explicabo et ad reprehenderit nostrum voluptates corporis
+            fugiat sint voluptas repellendus. Culpa, animi.
+          </p>
+          <nav class="social-nav">
+            <ul>
+              <li>
+                <a href="https://www.facebook.com" target="_blank">
+                  <i class="fa-brands fa-facebook-f"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com" target="_blank">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.twitter.com" target="_blank">
+                  <i class="fa-brands fa-twitter"></i>
+                </a>
+              </li>
+              <li>
+                <a href="mailto:7Ku6t@example.com">
+                  <i class="fa-regular fa-envelope" target="_blank"></i>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div>
+          <h3>Quick Links</h3>
+          <nav class="footer-nav">
+            <ul>
+              <li><a href="/index.html">Home</a></li>
+              <li><a href="./products.html">Products</a></li>
+              <li><a href="./testimonials.html">Testimonials</a></li>
+              <li><a href="./cart.html">Cart</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <p>
+          ITI ES6 Course Project E-commerce Website Created by Mohamed Nassar
+          &copy; 2025 All rights reserved
+        </p>
+      </div>
+    </footer>
+
+    <script src="../js/shared.js" type="module"></script>
+    <script src="../js/product.js" type="module"></script>
+  </body>
+</html>

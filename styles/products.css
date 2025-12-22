@@ -1,0 +1,58 @@
+@import url("./global.css");
+@import url("./layout.css");
+
+main {
+  padding: 20px 0;
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.options {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.products {
+  padding: 20px 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+article {
+  border-radius: 10px;
+  background-color: #fff;
+
+  img {
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  & > div {
+    padding: 20px;
+
+    p {
+      margin: 15px 0;
+      font-size: 0.9rem;
+      color: #444;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+  }
+
+  .buttons {
+    display: flex;
+    gap: 10px;
+
+    button:last-of-type {
+      flex: 1;
+    }
+  }
+}
