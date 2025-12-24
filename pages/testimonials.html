@@ -5,10 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="shortcut icon"
-      href="/assets/images/favicon.ico"
+      href="../assets/images/favicon.ico"
       type="image/x-icon"
     />
     <title>Document</title>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <div class="container">
+        <h2>E-com</h2>
+
+        <button class="burger" id="burger">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <nav id="nav-menu">
+          <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="./products.html">Products</a></li>
+            <li><a href="./testimonials.html">Testimonials</a></li>
+            <li><a href="./cart.html">Cart</a></li>
+          </ul>
+        </nav>
+
+        <div id="auth">
+          <ul id="no-user">
+            <li><a class="btn btn-primary" href="./login.html">Log in</a></li>
+            <li>
+              <a class="btn btn-secondary" href="./register.html">Register</a>
+            </li>
+          </ul>
+
+          <div id="user-profile">
+            <span id="username"></span>
+            <button class="btn btn-danger" id="log-out">Log out</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main></main>
+
+    <footer></footer>
+  </body>
 </html>

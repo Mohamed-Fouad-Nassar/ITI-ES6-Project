@@ -1,6 +1,16 @@
 import { getLoggedInUser, logOutUser } from "./auth-shared.js";
 import { createDefaultUsers } from "./utils.js";
 
+// header menu
+const burger = document.getElementById("burger");
+const nav = document.getElementById("nav-menu");
+const auth = document.getElementById("auth");
+
+burger.addEventListener("click", () => {
+  nav.classList.toggle("active");
+  auth.classList.toggle("active");
+});
+
 // create default users
 createDefaultUsers();
 

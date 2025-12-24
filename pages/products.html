@@ -16,7 +16,7 @@
     />
     <link
       rel="shortcut icon"
-      href="/assets/images/favicon.ico"
+      href="../assets/images/favicon.ico"
       type="image/x-icon"
     />
     <link rel="stylesheet" href="../styles/products.css" />
@@ -28,7 +28,12 @@
     <header>
       <div class="container">
         <h2>E-com</h2>
-        <nav>
+
+        <button class="burger" id="burger">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <nav id="nav-menu">
           <ul>
             <li><a href="/index.html">Home</a></li>
             <li><a href="#" class="active">Products</a></li>
@@ -36,13 +41,15 @@
             <li><a href="./cart.html">Cart</a></li>
           </ul>
         </nav>
-        <div>
+
+        <div id="auth">
           <ul id="no-user">
             <li><a class="btn btn-primary" href="./login.html">Log in</a></li>
             <li>
               <a class="btn btn-secondary" href="./register.html">Register</a>
             </li>
           </ul>
+
           <div id="user-profile">
             <span id="username"></span>
             <button class="btn btn-danger" id="log-out">Log out</button>
@@ -61,6 +68,7 @@
           </div>
         </section>
 
+        <div id="loader" class="spinner"></div>
         <section class="products"></section>
       </div>
     </main>

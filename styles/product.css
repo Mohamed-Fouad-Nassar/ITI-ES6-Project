@@ -17,6 +17,7 @@ main {
 
   h2 {
     display: none;
+    margin-bottom: 10px;
   }
 
   .details {

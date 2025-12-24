@@ -16,7 +16,7 @@
     />
     <link
       rel="shortcut icon"
-      href="/assets/images/favicon.ico"
+      href="../assets/images/favicon.ico"
       type="image/x-icon"
     />
     <link rel="stylesheet" href="../styles/cart.css" />
@@ -27,7 +27,12 @@
     <header>
       <div class="container">
         <h2>E-com</h2>
-        <nav>
+
+        <button class="burger" id="burger">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <nav id="nav-menu">
           <ul>
             <li><a href="/index.html">Home</a></li>
             <li><a href="./products.html">Products</a></li>
@@ -35,17 +40,15 @@
             <li><a href="#" class="active">Cart</a></li>
           </ul>
         </nav>
-        <div>
+
+        <div id="auth">
           <ul id="no-user">
+            <li><a class="btn btn-primary" href="./login.html">Log in</a></li>
             <li>
-              <a class="btn btn-primary" href="./pages/login.html">Log in</a>
-            </li>
-            <li>
-              <a class="btn btn-secondary" href="./pages/register.html"
-                >Register</a
-              >
+              <a class="btn btn-secondary" href="./register.html">Register</a>
             </li>
           </ul>
+
           <div id="user-profile">
             <span id="username"></span>
             <button class="btn btn-danger" id="log-out">Log out</button>
@@ -58,51 +61,34 @@
       <div class="container">
         <h2>Your Cart</h2>
 
-        <section class="cart-items" id="cartItems">
-          <div class="cart-item">
-            <div class="qty">2 ×</div>
-            <div class="image">
-              <img src="/assets/products/product.webp" alt="product" />
-            </div>
-            <div>Product 1</div>
-            <div class="actions">
-              <button class="btn-icon btn-primary">
-                <i class="fa-solid fa-plus"></i>
-              </button>
-              <div class="price">200</div>
-              <button class="btn-icon btn-secondary">
-                <i class="fa-solid fa-minus"></i>
-              </button>
-              <button class="btn-icon btn-danger" class="delete">
-                <i class="fa-solid fa-trash"></i>
-              </button>
-            </div>
-          </div>
-        </section>
+        <div id="loader" class="spinner"></div>
+        <div id="content">
+          <section class="cart-items" id="cart-items"></section>
 
-        <section class="summary">
-          <div>
-            <span>Items Number</span>
-            <span id="itemsCount">0</span>
-          </div>
-          <div>
-            <span>Sub-total</span>
-            <span id="subtotal">$0.00</span>
-          </div>
-          <div>
-            <span>Discount</span>
-            <span id="discount">$0.00</span>
-          </div>
-          <div class="total">
-            <span>Total</span>
-            <span id="total">$0.00</span>
-          </div>
-        </section>
+          <section class="summary">
+            <div>
+              <span>Items Number</span>
+              <span id="itemsCount">0</span>
+            </div>
+            <div>
+              <span>Sub-total</span>
+              <span id="subtotal">$0.00</span>
+            </div>
+            <div>
+              <span>Discount</span>
+              <span id="discount">$0.00</span>
+            </div>
+            <div class="total">
+              <span>Total</span>
+              <span id="total">$0.00</span>
+            </div>
+          </section>
 
-        <section class="buttons">
-          <button class="btn btn-primary">Complete Ordering</button>
-          <button class="btn btn-ghost" id="clearCart">Clear Cart</button>
-        </section>
+          <section class="buttons">
+            <button class="btn btn-primary">Complete Ordering</button>
+            <button class="btn btn-ghost" id="clear-cart">Clear Cart</button>
+          </section>
+        </div>
       </div>
     </main>
 
@@ -163,82 +149,27 @@
 
     <script src="../js/shared.js" type="module"></script>
     <script src="../js/cart.js" type="module"></script>
-
-    <!-- <script>
-      let cart = [
-        { id: 1, name: "Iced Coffee", price: 4, qty: 1 },
-        { id: 2, name: "Chicken Caesar Wrap", price: 9, qty: 1 },
-        { id: 3, name: "Fresh mint limeade", price: 15, qty: 4 },
-      ];
-
-      const cartItems = document.getElementById("cartItems");
-      const itemsCount = document.getElementById("itemsCount");
-      const subtotalEl = document.getElementById("subtotal");
-      const discountEl = document.getElementById("discount");
-      const totalEl = document.getElementById("total");
-
-      function renderCart() {
-        cartItems.innerHTML = "";
-
-        cart.forEach((item) => {
-          const row = document.createElement("div");
-          row.className = "cart-item";
-
-          row.innerHTML = `
-        <div class="qty">${item.qty} ×</div>
-        <div>${item.name}</div>
-        <div class="price">$${(item.price * item.qty).toFixed(2)}</div>
-        <div class="actions">
-          <button class='btn-icon btn-primary' onclick="updateQty(${
-            item.id
-          }, -1)">−</button>
-          <button class='btn-icon btn-secondary' onclick="updateQty(${
-            item.id
-          }, 1)">+</button>
-          <button class='btn-icon btn-danger' class="delete" onclick="removeItem(${
-            item.id
-          })"><i class="fa-solid fa-trash"></i></button>
-        </div>
-      `;
-
-          cartItems.appendChild(row);
-        });
-
-        updateSummary();
-      }
-
-      function updateQty(id, change) {
-        const item = cart.find((i) => i.id === id);
-        if (!item) return;
-
-        item.qty += change;
-        if (item.qty <= 0) removeItem(id);
-        renderCart();
-      }
-
-      function removeItem(id) {
-        cart = cart.filter((i) => i.id !== id);
-        renderCart();
-      }
-
-      function updateSummary() {
-        const items = cart.length;
-        const subtotal = cart.reduce((sum, i) => sum + i.price * i.qty, 0);
-        const discount = subtotal > 100 ? 32 : 0;
-        const total = subtotal - discount;
-
-        itemsCount.textContent = items;
-        subtotalEl.textContent = `$${subtotal.toFixed(2)}`;
-        discountEl.textContent = `$${discount.toFixed(2)}`;
-        totalEl.textContent = `$${total.toFixed(2)}`;
-      }
-
-      document.getElementById("clearCart").onclick = () => {
-        cart = [];
-        renderCart();
-      };
-
-      renderCart();
-    </script> -->
   </body>
 </html>
+
+<!-- 
+  <div class="cart-item">
+    <p class="qty">2 ×</p>
+    <p class="image">
+      <img src="../assets/products/product.webp" alt="product" />
+    </p>
+    <p>Product 1</p>
+    <div class="actions">
+      <button class="btn-icon btn-primary">
+        <i class="fa-solid fa-plus"></i>
+      </button>
+      <p class="price">200</p>
+      <button class="btn-icon btn-secondary">
+        <i class="fa-solid fa-minus"></i>
+      </button>
+      <button class="btn-icon btn-danger" class="delete">
+        <i class="fa-solid fa-trash"></i>
+      </button>
+    </div>
+  </div>
+ -->
