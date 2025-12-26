@@ -25,6 +25,7 @@ export function printProducts(products, container) {
       img.src = `${
         pathname === "/" ? "" : "../"
       }assets/images/image-broken.jpg`;
+      console.log(img.src);
     };
     article.appendChild(img);
 
