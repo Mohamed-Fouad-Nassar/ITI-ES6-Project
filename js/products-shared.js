@@ -19,7 +19,7 @@ export function printProducts(products, container) {
     // img.src = "/assets/products/product.webp";
     img.alt = product.title;
     img.onerror = () => {
-      img.src = "/assets/images/image-broken.jpg";
+      img.src = "assets/images/image-broken.jpg";
     };
     article.appendChild(img);
 
