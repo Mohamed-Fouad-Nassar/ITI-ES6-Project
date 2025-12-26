@@ -23,7 +23,7 @@ export function printProducts(products, container) {
     img.alt = product.title;
     img.onerror = () => {
       img.src = `${
-        pathname === "/" ? "" : "../"
+        pathname === "/" ? "./" : "../"
       }assets/images/image-broken.jpg`;
       console.log(img.src);
     };
