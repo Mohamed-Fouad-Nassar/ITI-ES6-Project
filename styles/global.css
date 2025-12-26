@@ -45,6 +45,10 @@ i {
   color: inherit;
 }
 
+p {
+  font-size: 1.1rem;
+}
+
 /* container */
 .container {
   width: 100%;
