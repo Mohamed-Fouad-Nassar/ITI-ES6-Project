@@ -2,7 +2,6 @@ import { formatCurrency } from "./utils.js";
 import { addToCart } from "./cart-shared.js";
 
 const pathname = window.location.pathname;
-console.log(pathname);
 
 export function printProducts(products, container) {
   if (products.length === 0) {
@@ -23,9 +22,8 @@ export function printProducts(products, container) {
     img.alt = product.title;
     img.onerror = () => {
       img.src = `${
-        pathname === "/" ? "./" : "../"
+        pathname.includes("/index.html") ? "./" : "../"
       }assets/images/image-broken.jpg`;
-      console.log(img.src);
     };
     article.appendChild(img);
 
