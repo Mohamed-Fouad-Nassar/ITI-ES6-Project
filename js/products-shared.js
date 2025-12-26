@@ -22,7 +22,9 @@ export function printProducts(products, container) {
     img.alt = product.title;
     img.onerror = () => {
       img.src = `${
-        pathname.includes("/index.html") ? "./" : "../"
+        pathname.includes("/index.html") || pathname === "/ITI-ES6-Project/"
+          ? "./"
+          : "../"
       }assets/images/image-broken.jpg`;
     };
     article.appendChild(img);
