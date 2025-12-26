@@ -1,0 +1,35 @@
+@import url("./global.css");
+@import url("./layout.css");
+
+main {
+  padding: 120px 0;
+  text-align: center;
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+
+    .image {
+      max-width: 350px;
+      margin: 0 auto;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          ellipse at center,
+          transparent 30%,
+          var(--bg-color) 100%
+        );
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

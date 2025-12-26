@@ -36,8 +36,10 @@
           <ul>
             <li><a href="#">Home</a></li>
             <li><a href="./pages/products.html">Products</a></li>
-            <li><a href="./pages/testimonials.html">Testimonials</a></li>
-            <li><a href="./pages/cart.html">Cart</a></li>
+            <li><a href="./pages/contact.html">Contact</a></li>
+            <li>
+              <a href="./pages/cart.html">Cart</a><span id="cart-count"></span>
+            </li>
           </ul>
         </nav>
 
@@ -62,22 +64,66 @@
     </header>
 
     <main>
-      <section class="hero">
-        <div class="container">
-          <h1>Discover Our Collection</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum
-            dolor sit amet consectetur adipisicing elit. Harum beatae itaque,
-            nulla ullam molestias repellat officia quod praesentium consectetur
-            libero, laudantium, obcaecati explicabo repellendus magni tenetur
-            fugit doloribus voluptas ipsa.
-          </p>
-          <button>Shop Now</button>
+      <section class="slider">
+        <div class="slides">
+          <div class="slide active">
+            <div class="container">
+              <h1>Discover Our Collection 1</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem
+                ipsum dolor sit amet consectetur adipisicing elit. Harum beatae
+                itaque, nulla ullam molestias repellat officia quod praesentium
+                consectetur libero, laudantium, obcaecati explicabo repellendus
+                magni tenetur fugit doloribus voluptas ipsa.
+              </p>
+              <button class="btn btn-primary">Shop Now 1</button>
+            </div>
+          </div>
+
+          <div class="slide">
+            <div class="container">
+              <h1>Discover Our Collection 2</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem
+                ipsum dolor sit amet consectetur adipisicing elit. Harum beatae
+                itaque, nulla ullam molestias repellat officia quod praesentium
+                consectetur libero, laudantium, obcaecati explicabo repellendus
+                magni tenetur fugit doloribus voluptas ipsa.
+              </p>
+              <button class="btn btn-primary">Shop Now 2</button>
+            </div>
+          </div>
+
+          <div class="slide">
+            <div class="container">
+              <h1>Discover Our Collection 3</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem
+                ipsum dolor sit amet consectetur adipisicing elit. Harum beatae
+                itaque, nulla ullam molestias repellat officia quod praesentium
+                consectetur libero, laudantium, obcaecati explicabo repellendus
+                magni tenetur fugit doloribus voluptas ipsa.
+              </p>
+              <button class="btn btn-primary">Shop Now 3</button>
+            </div>
+          </div>
         </div>
+
+        <button class="prev btn btn-primary">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button class="next btn btn-primary">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
       </section>
 
-      <section class="">
-        <div class="container"></div>
+      <section class="products-sec">
+        <div class="container">
+          <h2>Products</h2>
+          <div id="loader" class="spinner"></div>
+          <div class="products"></div>
+          <a href="./pages/products.html" class="btn btn-primary">View All</a>
+        </div>
       </section>
     </main>
 
@@ -123,7 +169,7 @@
             <ul>
               <li><a href="#">Home</a></li>
               <li><a href="./pages/products.html">Products</a></li>
-              <li><a href="./pages/testimonials.html">Testimonials</a></li>
+              <li><a href="./pages/contact.html">Contact</a></li>
               <li><a href="./pages/cart.html">Cart</a></li>
             </ul>
           </nav>
@@ -137,6 +183,6 @@
     </footer>
 
     <script src="./js/shared.js" type="module"></script>
-    <script src="./js/main.js"></script>
+    <script src="./js/main.js" type="module"></script>
   </body>
 </html>

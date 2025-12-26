@@ -1,10 +1,11 @@
 import {
+  updateQty,
   clearCart,
   getCartItems,
   removeFromCart,
-  updateQty,
 } from "./cart-shared.js";
 import { formatCurrency } from "./utils.js";
+import { getLoggedInUser } from "./auth-shared.js";
 
 const loader = document.getElementById("loader");
 const content = document.getElementById("content");
@@ -14,6 +15,7 @@ const subtotalEl = document.getElementById("subtotal");
 const discountEl = document.getElementById("discount");
 const totalEl = document.getElementById("total");
 const clearCartBtn = document.getElementById("clear-cart");
+const completeOrderBtn = document.getElementById("complete-order");
 
 function printEmptyCart() {
   const div = document.createElement("div");
@@ -133,4 +135,15 @@ clearCartBtn.addEventListener("click", () => {
   clearCart();
   printCartItems();
   content.style.visibility = "hidden";
+});
+
+const loggedInUser = getLoggedInUser();
+console.log(loggedInUser);
+
+if (!loggedInUser) completeOrderBtn.disabled = true;
+completeOrderBtn.addEventListener("click", () => {
+  if (loggedInUser) {
+    clearCart();
+    location.replace("/pages/success.html");
+  } else alert("Please login to complete your order");
 });

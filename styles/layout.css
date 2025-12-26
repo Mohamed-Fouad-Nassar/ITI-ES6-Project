@@ -26,6 +26,25 @@ header .container {
     &.active {
       color: var(--main-color);
     }
+
+    &:has(span) {
+      position: relative;
+
+      span {
+        display: none;
+        position: absolute;
+        top: 0;
+        right: -10px;
+        color: white;
+        font-size: 0.9rem;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--main-color);
+      }
+    }
   }
 
   #user-profile {
@@ -48,7 +67,7 @@ header .container {
     display: block;
   }
 
-  nav,
+  header nav,
   #auth {
     display: none;
     width: 100%;
@@ -131,9 +150,14 @@ footer {
 
   a {
     padding: 10px !important;
-    background-color: black;
+    background-color: var(--main-color);
     color: white;
     border-radius: 5px;
+    font-size: 1.5rem;
+
+    &:hover {
+      background-color: var(--main-hover);
+    }
   }
 }
 

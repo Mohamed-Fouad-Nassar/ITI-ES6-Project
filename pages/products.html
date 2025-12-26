@@ -37,8 +37,13 @@
           <ul>
             <li><a href="/index.html">Home</a></li>
             <li><a href="#" class="active">Products</a></li>
-            <li><a href="./testimonials.html">Testimonials</a></li>
-            <li><a href="./cart.html">Cart</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+            <li>
+              <a href="./cart.html"
+                >Cart
+                <span id="cart-count"></span>
+              </a>
+            </li>
           </ul>
         </nav>
 
@@ -63,8 +68,16 @@
         <section class="heading">
           <h2>Products</h2>
           <div class="options">
-            <div>FILTER</div>
-            <div>SORT</div>
+            <!-- <div>FILTER</div> -->
+            <select name="filter" id="filter">
+              <option value="" selected>all categories</option>
+            </select>
+            <!-- <div>SORT</div> -->
+            <select name="sort" id="sort">
+              <option value="" selected>Sort By: Default</option>
+              <option value="asc">Price (Low to High)</option>
+              <option value="desc">Price (High to Low)</option>
+            </select>
           </div>
         </section>
 
@@ -115,7 +128,7 @@
             <ul>
               <li><a href="/index.html">Home</a></li>
               <li><a href="#">Products</a></li>
-              <li><a href="./testimonials.html">Testimonials</a></li>
+              <li><a href="./contact.html">Contact</a></li>
               <li><a href="./cart.html">Cart</a></li>
             </ul>
           </nav>

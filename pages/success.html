@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="E-commerce Website using HTML, CSS, JS. as a evaluation for the ES6 course in ITI, your cart page"
+      content="E-commerce Website using HTML, CSS, JS. as a evaluation for the ES6 course in ITI, order completed page"
     />
     <link
       rel="stylesheet"
@@ -19,10 +19,10 @@
       href="../assets/images/favicon.ico"
       type="image/x-icon"
     />
-    <link rel="stylesheet" href="../styles/cart.css" />
-    <title>E-commerce | Your Cart</title>
-  </head>
+    <link rel="stylesheet" href="../styles/success.css" />
 
+    <title>E-commerce | Success</title>
+  </head>
   <body>
     <header>
       <div class="container">
@@ -38,7 +38,7 @@
             <li><a href="./products.html">Products</a></li>
             <li><a href="./contact.html">Contact</a></li>
             <li>
-              <a href="#" class="active">Cart <span id="cart-count"></span></a>
+              <a href="./cart.html">Cart <span id="cart-count"></span></a>
             </li>
           </ul>
         </nav>
@@ -61,38 +61,12 @@
 
     <main>
       <div class="container">
-        <h2>Your Cart</h2>
-
-        <div id="loader" class="spinner"></div>
-        <div id="content">
-          <section class="cart-items" id="cart-items"></section>
-
-          <section class="summary">
-            <div>
-              <span>Items Number</span>
-              <span id="itemsCount">0</span>
-            </div>
-            <div>
-              <span>Sub-total</span>
-              <span id="subtotal">$0.00</span>
-            </div>
-            <div>
-              <span>Discount</span>
-              <span id="discount">$0.00</span>
-            </div>
-            <div class="total">
-              <span>Total</span>
-              <span id="total">$0.00</span>
-            </div>
-          </section>
-
-          <section class="buttons">
-            <button id="complete-order" class="btn btn-primary">
-              Complete Ordering
-            </button>
-            <button class="btn btn-ghost" id="clear-cart">Clear Cart</button>
-          </section>
+        <div class="image">
+          <img src="/assets/images/success.gif" alt="success image" />
         </div>
+        <h1>You Order Created Successfully</h1>
+        <p>Thank you for shopping with us</p>
+        <a class="btn btn-primary" href="./products.html">Continue Shopping</a>
       </div>
     </main>
 
@@ -139,7 +113,7 @@
               <li><a href="/index.html">Home</a></li>
               <li><a href="./products.html">Products</a></li>
               <li><a href="./contact.html">Contact</a></li>
-              <li><a href="#">Cart</a></li>
+              <li><a href="./cart.html">Cart</a></li>
             </ul>
           </nav>
         </div>
@@ -152,28 +126,5 @@
     </footer>
 
     <script src="../js/shared.js" type="module"></script>
-    <script src="../js/cart.js" type="module"></script>
   </body>
 </html>
-
-<!-- 
-  <div class="cart-item">
-    <p class="qty">2 ×</p>
-    <p class="image">
-      <img src="../assets/products/product.webp" alt="product" />
-    </p>
-    <p>Product 1</p>
-    <div class="actions">
-      <button class="btn-icon btn-primary">
-        <i class="fa-solid fa-plus"></i>
-      </button>
-      <p class="price">200</p>
-      <button class="btn-icon btn-secondary">
-        <i class="fa-solid fa-minus"></i>
-      </button>
-      <button class="btn-icon btn-danger" class="delete">
-        <i class="fa-solid fa-trash"></i>
-      </button>
-    </div>
-  </div>
- -->

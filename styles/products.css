@@ -1,5 +1,6 @@
 @import url("./global.css");
 @import url("./layout.css");
+@import url("./products-shared.css");
 
 main {
   padding: 20px 0;
@@ -17,56 +18,9 @@ main {
   gap: 20px;
 }
 
-.products {
-  padding: 20px 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-}
-
-article {
-  border-radius: 10px;
-  background-color: #fff;
-
-  h3 {
-    font-size: 1.3rem;
-  }
-  h4 {
-    margin-bottom: 20px;
-  }
-
-  img {
-    margin: 0 auto;
-    max-width: 100%;
-  }
-
-  span {
-    display: block;
-    color: #777;
-    padding-top: 5px;
-    font-weight: 600;
-  }
-
-  & > div {
-    padding: 20px;
-
-    p {
-      margin: 15px 0;
-      font-size: 0.9rem;
-      color: #444;
-      display: -webkit-box;
-      -webkit-line-clamp: 3;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-  }
-
-  .buttons {
-    display: flex;
-    gap: 10px;
-
-    button:last-of-type {
-      flex: 1;
-    }
-  }
+select {
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  text-transform: capitalize;
 }

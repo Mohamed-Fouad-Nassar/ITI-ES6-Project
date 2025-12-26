@@ -1,0 +1,38 @@
+@import url("./global.css");
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  #form-err {
+    width: 100%;
+    background-color: var(--danger-foreground-color);
+    border: 1px solid var(--danger-color);
+    padding: 10px 15px;
+    border-radius: 6px;
+  }
+
+  span {
+    display: block;
+    color: var(--danger-color);
+    font-size: 0.8rem;
+
+    &:empty {
+      display: none;
+    }
+  }
+
+  .field {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    input,
+    textarea {
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      padding: 10px 14px;
+    }
+  }
+}

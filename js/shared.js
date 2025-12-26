@@ -1,5 +1,6 @@
-import { getLoggedInUser, logOutUser } from "./auth-shared.js";
 import { createDefaultUsers } from "./utils.js";
+import { getCartItemsTotalQty } from "./cart-shared.js";
+import { getLoggedInUser, logOutUser } from "./auth-shared.js";
 
 // header menu
 const burger = document.getElementById("burger");
@@ -11,6 +12,19 @@ burger.addEventListener("click", () => {
   auth.classList.toggle("active");
 });
 
+// header cart counter
+export function updateCartCounter() {
+  const cartCounter = document.getElementById("cart-count");
+  let cartItemsCount = getCartItemsTotalQty();
+  if (cartItemsCount) {
+    cartCounter.textContent = cartItemsCount;
+    cartCounter.style.display = "flex";
+  } else {
+    cartCounter.textContent = 0;
+    cartCounter.style.display = "none";
+  }
+}
+updateCartCounter();
 // create default users
 createDefaultUsers();
 

@@ -1,6 +1,6 @@
 import { getProductById } from "./api.js";
 import { formatCurrency } from "./utils.js";
-import { handleCartAction, addToCart } from "./cart-shared.js";
+import { addToCart } from "./cart-shared.js";
 
 function printProductDetails(product) {
   document.title = `E-commerce | ${product.name}`;

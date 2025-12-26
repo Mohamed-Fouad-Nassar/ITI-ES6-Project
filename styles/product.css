@@ -46,14 +46,18 @@ main {
   }
 }
 
-main .container div {
-  margin: 0 auto;
+main .container {
+  visibility: hidden;
 
-  img {
-    margin-top: 20px;
-    max-width: 100%;
-    border-radius: 10px;
-    overflow: hidden;
+  div {
+    margin: 0 auto;
+
+    img {
+      margin-top: 20px;
+      max-width: 100%;
+      border-radius: 10px;
+      overflow: hidden;
+    }
   }
 }
 

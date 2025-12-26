@@ -3,6 +3,8 @@ const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 export const isValidEmail = (email) => (emailRegex.test(email) ? true : false);
 
 const nameRegex = /^[a-zA-Z\s\-']{2,50}$/;
+export const cleanName = (name) =>
+  name.replace(/[\u200E\u200F\u202A-\u202E]/g, "").trim();
 export const isValidName = (name) => (nameRegex.test(name) ? true : false);
 
 const passwordRegex =
@@ -10,6 +12,8 @@ const passwordRegex =
 export const isValidPassword = (password) =>
   passwordRegex.test(password) ? true : false;
 
+const msgRegex = /^[a-zA-Z0-9\s\.\-]{2,200}$/;
+export const isValidMsg = (msg) => (msgRegex.test(msg) ? true : false);
 // -------------------------
 
 // users and local storage handlers

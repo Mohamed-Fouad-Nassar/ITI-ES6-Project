@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="E-commerce Website using HTML, CSS, JS. as a evaluation for the ES6 course in ITI, your cart page"
+      content="E-commerce Website using HTML, CSS, JS. as a evaluation for the ES6 course in ITI, contact page"
     />
     <link
       rel="stylesheet"
@@ -19,8 +19,9 @@
       href="../assets/images/favicon.ico"
       type="image/x-icon"
     />
-    <link rel="stylesheet" href="../styles/cart.css" />
-    <title>E-commerce | Your Cart</title>
+    <link rel="stylesheet" href="../styles/contact.css" />
+
+    <title>E-commerce | Contact</title>
   </head>
 
   <body>
@@ -36,9 +37,9 @@
           <ul>
             <li><a href="/index.html">Home</a></li>
             <li><a href="./products.html">Products</a></li>
-            <li><a href="./contact.html">Contact</a></li>
+            <li><a href="#" class="active">Contact</a></li>
             <li>
-              <a href="#" class="active">Cart <span id="cart-count"></span></a>
+              <a href="./cart.html">Cart <span id="cart-count"></span></a>
             </li>
           </ul>
         </nav>
@@ -61,38 +62,86 @@
 
     <main>
       <div class="container">
-        <h2>Your Cart</h2>
+        <section>
+          <div>
+            <h2>Be in touch</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora
+              voluptates suscipit exercitationem a sit incidunt praesentium!
+              Molestias et quam amet illum facilis, iure modi odio rerum, iste
+              illo porro repellat?
+            </p>
+            <div class="contact-info">
+              <article class="row">
+                <div>
+                  <i class="fa-solid fa-phone"></i>
+                </div>
+                <p>+121 322 422 322</p>
+              </article>
+              <article class="row">
+                <div>
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              </article>
+              <article class="row">
+                <div>
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+                <p>support@ecommerce.com</p>
+              </article>
+            </div>
+            <nav class="social-nav">
+              <ul>
+                <li>
+                  <a href="https://www.facebook.com" target="_blank">
+                    <i class="fa-brands fa-facebook-f"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.twitter.com" target="_blank">
+                    <i class="fa-brands fa-twitter"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="mailto:7Ku6t@example.com">
+                    <i class="fa-regular fa-envelope" target="_blank"></i>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
 
-        <div id="loader" class="spinner"></div>
-        <div id="content">
-          <section class="cart-items" id="cart-items"></section>
-
-          <section class="summary">
-            <div>
-              <span>Items Number</span>
-              <span id="itemsCount">0</span>
+          <form id="contact-form">
+            <span id="form-err"></span>
+            <div class="field">
+              <label for="email">Email address</label>
+              <input type="email" id="email" required />
+              <span id="email-err"></span>
             </div>
-            <div>
-              <span>Sub-total</span>
-              <span id="subtotal">$0.00</span>
+            <div class="field">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" required />
+              <span id="name-err"></span>
             </div>
-            <div>
-              <span>Discount</span>
-              <span id="discount">$0.00</span>
+            <div class="field">
+              <label for="sub">Subject</label>
+              <input type="text" id="sub" required />
+              <span id="sub-err"></span>
             </div>
-            <div class="total">
-              <span>Total</span>
-              <span id="total">$0.00</span>
+            <div class="field">
+              <label for="message">Your Message</label>
+              <textarea id="message" required></textarea>
+              <span id="msg-err"></span>
             </div>
-          </section>
-
-          <section class="buttons">
-            <button id="complete-order" class="btn btn-primary">
-              Complete Ordering
-            </button>
-            <button class="btn btn-ghost" id="clear-cart">Clear Cart</button>
-          </section>
-        </div>
+            <button class="btn btn-primary">Send</button>
+          </form>
+        </section>
       </div>
     </main>
 
@@ -139,7 +188,7 @@
               <li><a href="/index.html">Home</a></li>
               <li><a href="./products.html">Products</a></li>
               <li><a href="./contact.html">Contact</a></li>
-              <li><a href="#">Cart</a></li>
+              <li><a href="./cart.html">Cart</a></li>
             </ul>
           </nav>
         </div>
@@ -152,28 +201,6 @@
     </footer>
 
     <script src="../js/shared.js" type="module"></script>
-    <script src="../js/cart.js" type="module"></script>
+    <script src="../js/contact.js" type="module"></script>
   </body>
 </html>
-
-<!-- 
-  <div class="cart-item">
-    <p class="qty">2 ×</p>
-    <p class="image">
-      <img src="../assets/products/product.webp" alt="product" />
-    </p>
-    <p>Product 1</p>
-    <div class="actions">
-      <button class="btn-icon btn-primary">
-        <i class="fa-solid fa-plus"></i>
-      </button>
-      <p class="price">200</p>
-      <button class="btn-icon btn-secondary">
-        <i class="fa-solid fa-minus"></i>
-      </button>
-      <button class="btn-icon btn-danger" class="delete">
-        <i class="fa-solid fa-trash"></i>
-      </button>
-    </div>
-  </div>
- -->

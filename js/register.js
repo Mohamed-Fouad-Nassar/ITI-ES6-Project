@@ -1,4 +1,5 @@
 import {
+  cleanName,
   isValidName,
   isUserExists,
   isValidEmail,
@@ -29,7 +30,7 @@ form.addEventListener("submit", (e) => {
   let isFormValid = true;
 
   const data = {
-    name: name.value.trim(),
+    name: cleanName(name.value),
     email: email.value.trim(),
     pass: password.value,
     confirmPass: confirmPassword.value,
@@ -38,6 +39,8 @@ form.addEventListener("submit", (e) => {
   [nameErr, emailErr, passErr, confirmPassErr].forEach(
     (el) => (el.textContent = "")
   );
+
+  console.log(data.name);
 
   if (!isValidName(data.name)) {
     nameErr.textContent = "Please enter your name";

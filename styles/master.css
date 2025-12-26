@@ -1,34 +1,19 @@
 @import url("./global.css");
 @import url("./layout.css");
+@import url("./products-shared.css");
 
 /* main */
-main {
-  /* height: 3000px; */
-}
+/* main {
+  padding: 20px 0;
+} */
 
 /* hero section */
-.hero {
+/* .slider {
   padding: 100px 0;
   text-align: center;
   aspect-ratio: 16 / 9;
   display: flex;
   align-items: center;
-  /* background-image: url("../assets/images/world-map-dotted.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  z-index: 1;
-
-  &::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-color: #fff;
-    backdrop-filter: blur(10px);
-    opacity: 0.9;
-    z-index: -1;
-  } */
 
   h1 {
     font-size: 2.5rem;
@@ -47,5 +32,71 @@ main {
     border-radius: 10px;
     font-size: 1.01rem;
     font-weight: 500;
+  }
+} */
+
+/* slider */
+.slider {
+  text-align: center;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  position: relative;
+
+  > button {
+    top: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+    max-width: fit-content !important;
+
+    &.prev {
+      left: 20px;
+    }
+
+    &.next {
+      right: 20px;
+    }
+  }
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: 200ms opacity ease-in-out;
+  transition-delay: 200ms;
+
+  .container {
+    width: 80%;
+    max-width: 900px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &.active {
+    opacity: 1;
+  }
+}
+
+/* products */
+.products-sec {
+  padding: 100px 0;
+
+  h2,
+  a {
+    width: fit-content;
+    display: block;
+    margin: 0 auto;
+  }
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  .container > div {
+    padding: 20px 0;
   }
 }
