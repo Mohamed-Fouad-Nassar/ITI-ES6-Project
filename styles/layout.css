@@ -105,8 +105,8 @@ header .container {
 /* go-up button */
 .go-up {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 20px !important;
+  right: 20px !important;
 }
 
 /* footer */

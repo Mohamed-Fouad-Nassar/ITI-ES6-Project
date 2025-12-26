@@ -49,7 +49,6 @@ function printCartItems() {
   const cartItems = getCartItems();
 
   cartItemsContainer.innerHTML = "";
-  console.log(cartItems.length);
 
   if (cartItems.length === 0) {
     loader.style.display = "none";
@@ -71,7 +70,7 @@ function printCartItems() {
       img.src = item.img;
       img.alt = item.title;
       img.onerror = () => {
-        img.src = "/assets/images/image-broken.jpg";
+        img.src = "../assets/images/image-broken.jpg";
       };
       image.appendChild(img);
       cartItem.appendChild(image);
@@ -138,7 +137,6 @@ clearCartBtn.addEventListener("click", () => {
 });
 
 const loggedInUser = getLoggedInUser();
-console.log(loggedInUser);
 
 if (!loggedInUser) completeOrderBtn.disabled = true;
 completeOrderBtn.addEventListener("click", () => {
