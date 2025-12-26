@@ -44,11 +44,11 @@ export function createNewUser(name, email, password) {
 
 export function logInUser(user) {
   localStorage.setItem("loggedInUser", JSON.stringify(user));
-  location.replace("/");
+  location.replace("../index.html");
 }
 
 export function logOutUser() {
   localStorage.removeItem("loggedInUser");
-  location.replace("/");
+  location.replace("../index.html");
 }
 // ---------------------------

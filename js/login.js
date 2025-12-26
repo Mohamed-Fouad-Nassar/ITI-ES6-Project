@@ -56,4 +56,4 @@ function login(email, password) {
 
 // check if user is logged in redirect from auth pages
 const loggedInUser = getLoggedInUser();
-if (loggedInUser) location.replace("/");
+if (loggedInUser) location.replace("../index.html");
