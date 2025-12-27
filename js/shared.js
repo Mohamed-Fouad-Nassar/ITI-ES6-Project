@@ -16,13 +16,8 @@ burger.addEventListener("click", () => {
 export function updateCartCounter() {
   const cartCounter = document.getElementById("cart-count");
   let cartItemsCount = getCartItemsTotalQty();
-  if (cartItemsCount) {
-    cartCounter.textContent = cartItemsCount;
-    cartCounter.style.display = "flex";
-  } else {
-    cartCounter.textContent = 0;
-    cartCounter.style.display = "none";
-  }
+  if (cartItemsCount) cartCounter.textContent = cartItemsCount;
+  else cartCounter.textContent = "";
 }
 updateCartCounter();
 // create default users
@@ -58,13 +53,9 @@ const userProfile = document.getElementById("user-profile");
 const loggedInUser = getLoggedInUser();
 
 if (loggedInUser) {
-  noUser.style.display = "none";
   userProfile.style.display = "flex";
   username.textContent = loggedInUser.name;
-} else {
-  userProfile.style.display = "none";
-  noUser.style.display = "flex";
-}
+} else noUser.style.display = "flex";
 
 // logout btn
 const logoutBtn = document.getElementById("log-out");

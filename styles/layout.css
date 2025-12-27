@@ -31,7 +31,7 @@ header .container {
       position: relative;
 
       span {
-        display: none;
+        display: flex;
         position: absolute;
         top: 0;
         right: -10px;
@@ -43,12 +43,18 @@ header .container {
         justify-content: center;
         align-items: center;
         background-color: var(--main-color);
+
+        &:empty {
+          visibility: hidden;
+        }
       }
     }
   }
 
+  #no-user,
   #user-profile {
-    display: flex;
+    display: none;
+
     align-items: center;
     gap: 20px;
   }
@@ -75,7 +81,6 @@ header .container {
 
   #user-profile,
   #no-user {
-    display: flex;
     justify-content: flex-end;
   }
   #no-user {
