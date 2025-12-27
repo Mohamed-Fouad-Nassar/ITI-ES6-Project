@@ -20,9 +20,11 @@ function printProductDetails(product) {
 
   productPrice.textContent = formatCurrency(product.price);
 
-  // productImage.src = product.img;
-  productImage.src = "/assets/images/image-broken.jpg";
+  productImage.src = product.img;
   productImage.alt = `${product.title} image`;
+  productImage.onerror = () => {
+    productImage.src = "../assets/images/image-broken.jpg";
+  };
 
   productDescription.textContent = product.description;
 
@@ -40,7 +42,7 @@ function printProductDetails(product) {
   container.style.visibility = "hidden";
   const product = await getProductById(productId);
   if (!product) {
-    location.replace("/pages/not-found.html");
+    location.replace("../pages/not-found.html");
     return;
   } else {
     printProductDetails(product);

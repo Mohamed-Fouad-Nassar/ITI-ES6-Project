@@ -25,7 +25,7 @@ function printEmptyCart() {
   div.appendChild(emptyMsg);
   const productLink = document.createElement("a");
   productLink.classList.add("btn", "btn-primary");
-  productLink.href = "/pages/products.html";
+  productLink.href = "../pages/products.html";
   productLink.textContent = "Browse products";
   div.appendChild(productLink);
 
@@ -142,6 +142,6 @@ if (!loggedInUser) completeOrderBtn.disabled = true;
 completeOrderBtn.addEventListener("click", () => {
   if (loggedInUser) {
     clearCart();
-    location.replace("/pages/success.html");
+    location.replace("../pages/success.html");
   } else alert("Please login to complete your order");
 });

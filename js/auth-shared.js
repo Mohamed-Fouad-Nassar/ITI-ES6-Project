@@ -49,6 +49,10 @@ export function logInUser(user) {
 
 export function logOutUser() {
   localStorage.removeItem("loggedInUser");
-  location.replace("../index.html");
+  const pathname = location.pathname;
+
+  pathname.includes("/index.html") || pathname === "/ITI-ES6-Project/"
+    ? location.reload()
+    : location.replace("../index.html");
 }
 // ---------------------------

@@ -1,7 +1,7 @@
 import { formatCurrency } from "./utils.js";
 import { addToCart } from "./cart-shared.js";
 
-const pathname = window.location.pathname;
+const pathname = location.pathname;
 
 export function printProducts(products, container) {
   if (products.length === 0) {
@@ -53,12 +53,21 @@ export function printProducts(products, container) {
     const btns = document.createElement("div");
     btns.classList.add("buttons");
     // details button
-    const detailsBtn = document.createElement("button");
+    const detailsBtn = document.createElement("a");
     detailsBtn.classList.add("btn", "btn-secondary");
     detailsBtn.innerHTML = '<i class="fa-regular fa-eye"></i>';
-    detailsBtn.addEventListener("click", () => {
-      window.location.href = `/pages/product.html?id=${product.id}`;
-    });
+    detailsBtn.href = `${
+      pathname.includes("/index.html") || pathname === "/ITI-ES6-Project/"
+        ? "./"
+        : "../"
+    }pages/product.html?id=${product.id}`;
+    // detailsBtn.addEventListener("click", () => {
+    //   window.location.href = `${
+    //     pathname.includes("/index.html") || pathname === "/ITI-ES6-Project/"
+    //       ? "./"
+    //       : "../"
+    //   }pages/product.html?id=${product.id}`;
+    // });
     btns.appendChild(detailsBtn);
     // cart button
     const cartBtn = document.createElement("button");
