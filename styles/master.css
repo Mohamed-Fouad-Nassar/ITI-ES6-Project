@@ -76,7 +76,7 @@
 
     a {
       font-size: 1.2rem;
-      padding: 17px 60px !important;
+      padding: 17px 60px;
 
       i {
         font-size: 1rem;
@@ -87,6 +87,21 @@
 
   &.active {
     opacity: 1;
+  }
+}
+
+@media (max-width: 767px) {
+  .slide .container {
+    h2 {
+      font-size: 2rem;
+    }
+    p {
+      font-size: 1.1rem;
+    }
+    a {
+      font-size: 1rem;
+      padding: 12px 30px;
+    }
   }
 }
 

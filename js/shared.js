@@ -14,12 +14,15 @@ burger.addEventListener("click", () => {
 
 // header cart counter
 export function updateCartCounter() {
+  // cartCounter.textContent = "";
   const cartCounter = document.getElementById("cart-count");
   let cartItemsCount = getCartItemsTotalQty();
   if (cartItemsCount) cartCounter.textContent = cartItemsCount;
   else cartCounter.textContent = "";
 }
-updateCartCounter();
+document.addEventListener("DOMContentLoaded", updateCartCounter);
+window.addEventListener("pageshow", updateCartCounter);
+
 // create default users
 createDefaultUsers();
 

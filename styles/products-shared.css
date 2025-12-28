@@ -53,8 +53,11 @@
     display: flex;
     gap: 10px;
 
-    button:last-of-type {
+    button {
       flex: 1;
+    }
+    a {
+      width: fit-content;
     }
   }
 }

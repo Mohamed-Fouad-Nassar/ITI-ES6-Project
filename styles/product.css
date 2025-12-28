@@ -5,6 +5,10 @@ main {
   padding: 30px 0;
 }
 
+.container > button {
+  width: fit-content;
+}
+
 .wrapper {
   display: flex;
   flex-direction: column-reverse;
