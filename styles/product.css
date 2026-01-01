@@ -32,7 +32,7 @@ main {
     }
 
     div {
-      border-top: 1px solid #eee;
+      border-top: 1px solid var(--border-color);
       padding-top: 20px;
       display: flex;
       align-items: center;
@@ -55,6 +55,11 @@ main .container {
 
   div {
     margin: 0 auto;
+
+    &:has(img) {
+      display: flex;
+      justify-content: center;
+    }
 
     img {
       margin-top: 20px;

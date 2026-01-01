@@ -2,6 +2,9 @@ import { createDefaultUsers } from "./utils.js";
 import { getCartItemsTotalQty } from "./cart-shared.js";
 import { getLoggedInUser, logOutUser } from "./auth-shared.js";
 
+import { applyTheme } from "./theme.js";
+applyTheme();
+
 // header menu
 const burger = document.getElementById("burger");
 const nav = document.getElementById("nav-menu");
@@ -26,7 +29,7 @@ window.addEventListener("pageshow", updateCartCounter);
 // create default users
 createDefaultUsers();
 
-// go up Button
+// go up button
 const goUpBtn = document.createElement("button");
 goUpBtn.innerHTML = '<i class="fa-solid fa-arrow-up"></i>';
 goUpBtn.classList.add("btn", "btn-primary", "go-up");
@@ -46,7 +49,27 @@ goUpBtn.addEventListener("click", () => {
 });
 
 document.body.appendChild(goUpBtn);
-// ----------------------------
+
+// theme toggle button
+import { toggleTheme, getCurrentTheme } from "./theme.js";
+
+const themeBtn = document.createElement("button");
+themeBtn.classList.add("btn", "btn-primary", "theme-toggle");
+
+function updateButtonIcon() {
+  themeBtn.innerHTML =
+    getCurrentTheme() === "dark"
+      ? '<i class="fa-solid fa-moon"></i>'
+      : '<i class="fa-solid fa-sun"></i>';
+}
+
+themeBtn.addEventListener("click", () => {
+  toggleTheme();
+  updateButtonIcon();
+});
+
+document.body.appendChild(themeBtn);
+updateButtonIcon();
 
 // check if user is logged in or not and change dom
 const noUser = document.getElementById("no-user");

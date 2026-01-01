@@ -23,7 +23,7 @@ function printProductDetails(product) {
   productImage.src = product.img;
   productImage.alt = `${product.title} image`;
   productImage.onerror = () => {
-    productImage.src = "../assets/images/image-broken.jpg";
+    productImage.src = "../assets/images/image-broken.png";
   };
 
   productDescription.textContent = product.description;

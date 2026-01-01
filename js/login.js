@@ -7,6 +7,9 @@ import {
   isCredentialValid,
 } from "./auth-shared.js";
 
+import { applyTheme } from "./theme.js";
+applyTheme();
+
 const form = document.getElementById("login-form");
 const formErr = document.getElementById("form-err");
 

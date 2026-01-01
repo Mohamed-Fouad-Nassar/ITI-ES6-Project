@@ -14,7 +14,6 @@ async function handlePrintProducts(callback) {
   loader.style.display = "block";
   productsContainer.innerHTML = "";
   const products = await callback();
-  console.log(products);
   printProducts(products, productsContainer);
   loader.style.display = "none";
 }

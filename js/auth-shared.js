@@ -55,4 +55,3 @@ export function logOutUser() {
     ? location.reload()
     : location.replace("../index.html");
 }
-// ---------------------------

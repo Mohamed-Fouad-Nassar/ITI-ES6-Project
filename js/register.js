@@ -8,6 +8,9 @@ import {
   isValidPassword,
 } from "./auth-shared.js";
 
+import { applyTheme } from "./theme.js";
+applyTheme();
+
 const form = document.getElementById("register-form");
 const formErr = document.getElementById("form-err");
 

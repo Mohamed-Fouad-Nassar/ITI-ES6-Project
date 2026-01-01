@@ -25,7 +25,7 @@ export function printProducts(products, container) {
         pathname.includes("/index.html") || pathname === "/ITI-ES6-Project/"
           ? "./"
           : "../"
-      }assets/images/image-broken.jpg`;
+      }assets/images/image-broken.png`;
     };
     article.appendChild(img);
 

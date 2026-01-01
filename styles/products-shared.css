@@ -12,7 +12,7 @@
 
 .product {
   border-radius: 10px;
-  background-color: #fff;
+  background-color: var(--bg-card);
   max-width: 400px;
   margin: 0 auto;
 
@@ -30,7 +30,7 @@
 
   span {
     display: block;
-    color: #777;
+    color: var(--text-light);
     padding-top: 5px;
     font-weight: 600;
   }
@@ -41,7 +41,7 @@
     p {
       margin: 15px 0;
       font-size: 0.9rem;
-      color: #444;
+      color: var(--text-light);
       display: -webkit-box;
       -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;

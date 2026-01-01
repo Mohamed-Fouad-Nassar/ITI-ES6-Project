@@ -70,7 +70,7 @@ function printCartItems() {
       img.src = item.img;
       img.alt = item.title;
       img.onerror = () => {
-        img.src = "../assets/images/image-broken.jpg";
+        img.src = "../assets/images/image-broken.png";
       };
       image.appendChild(img);
       cartItem.appendChild(image);

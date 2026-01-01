@@ -53,7 +53,7 @@ main {
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: white;
+      background-color: var(--bg-card);
       box-shadow: 4px 5px 11px -13px var(--border-color);
       border: 1px solid var(--border-color);
       color: var(--main-color);

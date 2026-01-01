@@ -20,11 +20,6 @@ main {
         content: "";
         position: absolute;
         inset: 0;
-        background: radial-gradient(
-          ellipse at center,
-          transparent 30%,
-          var(--bg-color) 100%
-        );
       }
 
       img {
